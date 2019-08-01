@@ -63,6 +63,7 @@
                 <version>3.0.0</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>${artifactId}</warName>
                 </configuration>
             </plugin>
             <plugin>
