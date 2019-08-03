@@ -1,7 +1,7 @@
 package com.ruoyi.framework.config;
 
 import cn.hutool.core.util.StrUtil;
-import com.ruoyi.common.xss.XssFilter;
+//import com.ruoyi.common.xss.XssFilter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -32,7 +32,7 @@ public class FilterConfig {
     public FilterRegistrationBean xssFilterRegistration() {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setDispatcherTypes(DispatcherType.REQUEST);
-        registration.setFilter(new XssFilter());
+      //  registration.setFilter(new XssFilter());
         registration.addUrlPatterns(StrUtil.split(urlPatterns, ","));
         registration.setName("xssFilter");
         registration.setOrder(Integer.MAX_VALUE);
